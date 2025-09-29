@@ -81,6 +81,7 @@ view: orders {
   dimension: ship_mode {
     type: string
     sql: ${TABLE}.Ship_Mode ;;
+    #required_access_grants: [prak]
   }
   dimension: state {
     type: string
