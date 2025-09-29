@@ -95,4 +95,24 @@ view: orders {
     type: count
     drill_fields: [order_id, customer_name, product_name]
   }
+
+#dynamic column
+
+  parameter: item_to_add_up {
+    type: unquoted
+    allowed_value: {
+      label: "Total Profit"
+      value: "profit"
+    }
+    allowed_value: {
+      label: "Total Sales"
+      value: "sales"
+    }
+  }
+
+  measure: dynamic_sum {
+    type: sum
+    sql: ${TABLE}.{% parameter item_to_add_up %} ;;
+    value_format_name: usd
+  }
 }

@@ -11,7 +11,9 @@ view: derived {
       column: sales { field: orders.sales }
     }
   }
+
   dimension: count {
+    label: "hi"
     type: number
     sql: ${TABLE}.count ;;
   }
