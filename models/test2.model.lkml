@@ -15,3 +15,4 @@ datagroup: inc_pdt  {
   sql_trigger:  SELECT MAX(order_id) FROM `elastic-pocs.Super_Store_Sales.Orders` ;;
   max_cache_age: "24 hour"
 }
+explore: derived {}
